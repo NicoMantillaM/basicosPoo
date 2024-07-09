@@ -83,3 +83,14 @@ const figura1 = new Figura ("blue", 3 )
 figura1.calcularArea();
 let message= document.querySelector("#message")
 message.innerHTML = `La figura tiene el color ${figura1.color} y un area de ${figura1.area} unidades cuadradas`;
+
+
+class Circulo extends Figura{
+    constructor(color, area, radio){
+        super(color,area)
+        this.radio = radio;
+    }
+    calcularArea(){
+        this.area = Math.PI * Math.pow(this.radio, 2);
+    }
+}
