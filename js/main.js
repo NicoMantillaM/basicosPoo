@@ -9,9 +9,20 @@ class Persona {
         console.log(`Hola ${this.nombre}`);
     }
     
+    static esMayorDeEdad(edad){
+        if (edad >= 18 ) {
+            return true
+        }else {
+            return false
+        }
+    }
 }
+
 const persona1 = new Persona("Camilo", 19, "Femenino")
 persona1.saludar();
+
+const esMayor = Persona.esMayorDeEdad(persona1.edad);
+console.log(`Es mayor de edad? ${esMayor}`);
 
 
 class Estudiante extends Persona{
