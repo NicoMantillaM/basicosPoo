@@ -91,6 +91,12 @@ class Circulo extends Figura{
         this.radio = radio;
     }
     calcularArea(){
-        this.area = Math.PI * Math.pow(this.radio, 2);
+        let areaCalculada = Math.PI * Math.pow(this.radio, 2);
+        this.area = areaCalculada.toFixed(2)
     }
 }
+const circulo1 = new Circulo ("red", 3, 5)
+circulo1.calcularArea();
+
+let message2 = document.querySelector("#message")
+message2.innerHTML = `El circulo es de color ${circulo1.color} y su area es de ${circulo1.area} unidades cuadradas`
